@@ -9,7 +9,7 @@ vector<int> vec;
 void func(int cnt) {
 
 
-
+adfadf  // IMPLEMENT HERE //
 
 
 
