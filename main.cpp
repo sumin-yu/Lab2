@@ -8,7 +8,7 @@ vector<int> vec;
 
 void func(int cnt) {
 
-
+  cout << "hello" << endl;
 
 
 
