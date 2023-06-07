@@ -21,6 +21,6 @@ void func(int cnt) {
 int main() {
    cout<<"Hello";
 
-   cin >> N >> M;
+   cin >> M;
    func(0);
 }
