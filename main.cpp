@@ -21,12 +21,6 @@ void func(int cnt) {
         vec[cnt] = i;  // 현재 자리에 i를 선택
         func(cnt + 1);  // 다음 자리를 선택하기 위해 재귀 호출
     }
-
-
-
-
-
-
 }
 
 int main() {
