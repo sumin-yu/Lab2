@@ -1,5 +1,7 @@
 #include<iostream>
 #include<vector>
+#include<cstring>
+
 
 using namespace std;
 
@@ -17,6 +19,8 @@ void func(int cnt) {
 }
 
 int main() {
-   cin >> N >> M;
+   cout<<"Hello";
+
+   cin >> M;
    func(0);
 }
