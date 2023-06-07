@@ -8,7 +8,8 @@ vector<int> vec;
 
 void func(int cnt) {
 
-
+if(cnt<=0)
+cout<<"Hello"<<endl;
 
 
 
