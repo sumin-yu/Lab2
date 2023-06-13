@@ -18,7 +18,7 @@ void func(int N, int M, int start, vector<int>& vec) {
         // 이미 수열에 포함된 경우 스킵
         bool isDuplicate = false;
         for (int i = 0; i < vec.size(); i++) {
-            if (sequence[i] == num) {
+            if (vec[i] == num) {
                 isDuplicate = true;
                 break;
             }
@@ -39,7 +39,7 @@ int main() {
     cin >> N >> M;
 
     vector<int> sequence;
-    findSequence(N, M, 1, sequence);
+    func(N, M, 1, sequence);
 
     return 0;
 }
