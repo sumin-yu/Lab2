@@ -1,22 +1,26 @@
 #include<iostream>
 #include<vector>
-
+#include<map>
 using namespace std;
 
-int N,M;
-vector<int> vec;
-
-void func(int cnt) {
-
-
-
-
-
-
-
+void func(int N, int M) {
+    map<int,int> list;
+    for(int i=0; i<M; i++){
+        while(1){
+            int n=rand()%N;
+            if(list.count(n)==0){  
+                list.insert({n,1});
+                break;
+            }
+        }
+    }
+    for(auto i : list){
+        cout<<i.first<<" ";
+    }
 }
 
 int main() {
-   cin >> N >> M;
-   func(0);
+    int N,M;
+    cin >> N >> M;
+    func(N,M);
 }
