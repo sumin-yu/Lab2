@@ -1,0 +1,38 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int N, M;
+vector<int> vec;
+
+void func(int count) {
+    if (count == M) {
+        for (int i = 0; i < M; i++) {
+            cout << vec[i] << ' ';
+        }
+        cout << '\n';
+        return;
+    }
+
+    for (int i = 1; i <= N; i++) {
+        bool used = false;
+        for (int j = 0; j < count; j++) {
+            if (vec[j] >= i) {
+                used = true;
+                break;
+            }
+        }
+        if (used != 1) {
+            vec[count] = i;
+            func(count + 1);
+        }
+    }
+}
+
+int main() {
+    cin >> N >> M;
+    vec.resize(M);
+    func(0);
+    return 0;
+}
