@@ -1,22 +1,30 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-int N,M;
-vector<int> vec;
+void func(int N, int M, vector<int>& a, int start) {
+    if (a.size() == M) {
+        for (int num : a) {
+            cout << num << " ";
+        }
+        cout << endl;
+        return;
+    }
 
-void func(int cnt) {
-
-
-
-
-
-
-
+    for (int i = start; i <= N; ++i) {
+        a.push_back(i);
+        func(N, M, a, i + 1);
+        a.pop_back();
+    }
 }
 
 int main() {
-   cin >> N >> M;
-   func(0);
+    int N, M;
+    cin >> N >> M;
+
+    vector<int> a;
+    func(N, M, a, 1);
+
+    return 0;
 }
